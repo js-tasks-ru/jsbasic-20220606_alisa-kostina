@@ -51,17 +51,7 @@ onClickSlide (event) {
   thumb.style.left = `${leftPercents}%`;
   progress.style.width = `${leftPercents}%`;
 
-  let sl_st = this.elem.querySelector('.slider__steps');
-  let closest = sl_st.childNodes;
-  let arr_closest = Array.from(closest);
   this.activeClass ();
-
-  /*for (let i = 0; i < arr_closest.length; i++) {
-    if (i == value) {
-      arr_closest.forEach(elem => elem.classList.remove('slider__step-active'));
-      arr_closest[i].classList.add('slider__step-active');
-    }
-  }*/
 
   let cusEv = new CustomEvent('slider-change', {
     detail: value,
